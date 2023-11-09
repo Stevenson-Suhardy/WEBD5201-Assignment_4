@@ -1,6 +1,6 @@
 class EmployeesController < ApplicationController
   before_action :set_employee, only: %i[ show edit update destroy ]
-
+  before_action :logged_in
   # GET /employees or /employees.json
   def index
     @employees = Employee.all
@@ -66,5 +66,11 @@ class EmployeesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def employee_params
       params.require(:employee).permit(:first_name, :last_name, :job_title, :salary)
+    end
+
+    def logged_in
+      if current_user.nil?
+        redirect_to new_user_session_path
+      end
     end
 end
