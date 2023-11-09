@@ -1,22 +1,13 @@
-<div id="<%= dom_id employee %>">
-  <p>
-    <strong>First name:</strong>
-    <%= employee.first_name %>
-  </p>
-
-  <p>
-    <strong>Last name:</strong>
-    <%= employee.last_name %>
-  </p>
-
-  <p>
-    <strong>Job title:</strong>
-    <%= employee.job_title %>
-  </p>
-
-  <p>
-    <strong>Salary:</strong>
-    <%= employee.salary %>
-  </p>
-
-</div>
+<tr id="<%= dom_id employee %>">
+  <td><%= employee.id %></td>
+  <td><%= employee.first_name %></td>
+  <td><%= employee.last_name %></td>
+  <td><%= employee.job_title %></td>
+  <td><%= employee.salary %></td>
+  <td>
+    <div style="display: flex">
+      <%= link_to "Edit", edit_employee_path(employee), class:"btn btn-primary" %>&nbsp;
+      <%= button_to "Delete", @employee, method: :delete, class:"btn btn-danger" %>
+    </div>
+  </td>
+</tr>
