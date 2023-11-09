@@ -1,10 +1,16 @@
+<h1>Showing employee</h1>
+
 <p style="color: green"><%= notice %></p>
 
-<%= render @employee %>
+<p>Id: <%= @employee.id %></p>
+<p>First Name: <%= @employee.first_name %></p>
+<p>Last Name: <%= @employee.last_name %></p>
+<p>Job Title: <%= @employee.job_title %></p>
+<p>Salary: <%= @employee.salary %></p>
 
-<div>
-  <%= link_to "Edit this employee", edit_employee_path(@employee) %> |
-  <%= link_to "Back to employees", employees_path %>
-
-  <%= button_to "Destroy this employee", @employee, method: :delete %>
+<div style="display: flex">
+  <%= link_to "Edit", edit_employee_path(@employee), class:"btn btn-primary" %>&nbsp;
+  <%= button_to "Delete", @employee, method: :delete, class:"btn btn-danger" %>
 </div>
+
+<br>
