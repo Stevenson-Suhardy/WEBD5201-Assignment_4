@@ -1,24 +1,56 @@
-# README
+# WEBD 5201-02 Assignment 4
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is created to fulfill the assignment requirements for WEBD 5201-02 course at Durham College.
 
-Things you may want to cover:
+## Description
 
-* Ruby version
+This program uses Ruby on Rails and SQLite for the database. This application is mainly used to display a list of tasks from the database with CRUD features and a simple design for the website along with an authentication. You can login by using these credentials:
 
-* System dependencies
+Username: admin
+Password: admin
 
-* Configuration
+Note: Don't forget to do the initial setup before logging in.
 
-* Database creation
+## Getting Started
 
-* Database initialization
+## Prerequisites
 
-* How to run the test suite
+Make sure to have Ruby version 2.7.2 and Ruby on Rails installed.
 
-* Services (job queues, cache servers, search engines, etc.)
+### Installing
 
-* Deployment instructions
+- How to setup your program
 
-* ...
+- Run the following command on the terminal
+
+```
+rails console
+```
+
+```
+user = User.new(:name => 'admin', :password => 'admin', :password_confirmation => 'admin')
+user.save
+```
+
+```
+rails db:migrate
+```
+
+- All done!
+
+### Executing program
+
+- How to run the program
+
+```
+// Run this command in the CLI. Make sure that the CLI is on your project directory.
+rails server
+```
+
+- Have fun playing around!
+
+## Authors
+
+Contributors names
+
+Stevenson Suhardy
