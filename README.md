@@ -6,10 +6,10 @@ This project is created to fulfill the assignment requirements for WEBD 5201-02 
 
 This program uses Ruby on Rails and SQLite for the database. This application is mainly used to display a list of tasks from the database with CRUD features and a simple design for the website along with an authentication. You can login by using these credentials:
 
-Username: admin
+Username: admin\
 Password: admin
 
-Note: Don't forget to do the initial setup before logging in.
+Note: Don't forget to do the initial setup before running the application.
 
 ## Getting Started
 
@@ -21,16 +21,16 @@ Make sure to have Ruby version 2.7.2 and Ruby on Rails installed.
 
 - How to setup your program
 
-- Run the following command on the terminal. This allows for all gems to be installed.
-
-```
-bundle install
-```
-
 - Run database migration
 
 ```
 rails db:migrate
+```
+
+- Run the following command on the terminal. This allows for all gems to be installed.
+
+```
+bundle install
 ```
 
 - All done!
