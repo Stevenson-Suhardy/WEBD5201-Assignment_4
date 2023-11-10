@@ -7,5 +7,10 @@ class CreateUsers < ActiveRecord::Migration[7.1]
 
       t.timestamps
     end
+
+    if User.where(:name => 'admin').blank?
+      user = User.new(:name => 'admin', :password => 'admin', :password_confirmation => 'admin')
+      user.save
+    end
   end
 end

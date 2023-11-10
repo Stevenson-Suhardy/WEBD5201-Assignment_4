@@ -13,7 +13,7 @@ Note: Don't forget to do the initial setup before logging in.
 
 ## Getting Started
 
-## Prerequisites
+### Prerequisites
 
 Make sure to have Ruby version 2.7.2 and Ruby on Rails installed.
 
@@ -21,16 +21,13 @@ Make sure to have Ruby version 2.7.2 and Ruby on Rails installed.
 
 - How to setup your program
 
-- Run the following command on the terminal
+- Run the following command on the terminal. This allows for all gems to be installed.
 
 ```
-rails console
+bundle install
 ```
 
-```
-user = User.new(:name => 'admin', :password => 'admin', :password_confirmation => 'admin')
-user.save
-```
+- Run database migration
 
 ```
 rails db:migrate
