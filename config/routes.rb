@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  resources :tasks
   resources :user_sessions, only: [:new, :create, :destroy]
-  resources :employees
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root 'welcome#index'
 

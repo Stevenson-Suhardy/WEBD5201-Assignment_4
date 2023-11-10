@@ -1,0 +1,23 @@
+<h1>List of Tasks</h1>
+
+<%= link_to "New Task", new_task_path, class:"btn btn-dark" %>
+
+<br><br>
+
+<table class="table table-striped" border="1">
+    <thead>
+        <tr>
+            <th scope="col">Task ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+      <% @tasks.each do |task| %>
+        <%= render task %>
+      <% end %>
+    </tbody>
+</table>
+
+
